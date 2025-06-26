@@ -1,0 +1,309 @@
+/* General Resets and Body Styles */
+@import url('https://fonts.googleapis.com/css2?family=Nike+Futura&display=swap'); /* You'd need to find a font similar to Nike's or use a web-safe alternative */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* A common sans-serif font */
+    line-height: 1.6;
+    color: #111;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.top-bar {
+    background-color: #000;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 8px 0;
+}
+
+.top-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo svg {
+    fill: #111;
+}
+
+.categories-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.categories-nav a {
+    font-weight: bold;
+    color: #111;
+    padding: 5px 0;
+    position: relative;
+}
+
+.categories-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #111;
+    transition: width 0.3s ease;
+}
+
+.categories-nav a:hover::after {
+    width: 100%;
+}
+
+.search-and-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 1em;
+    width: 150px;
+}
+
+.search-bar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-bar svg {
+    fill: #111;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icons svg {
+    fill: #111;
+    cursor: pointer;
+}
+
+/* Promo Banner */
+.promo-banner {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    border-bottom: 1px solid #eee;
+}
+
+.promo-content .download-link {
+    color: #007bff; /* A blue color for links */
+    font-weight: bold;
+}
+
+.promo-content .download-link:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    min-height: 500px; /* Adjust as needed */
+}
+
+.hero-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.left-image {
+    background-color: #f0f0f0; /* Placeholder background */
+}
+
+.right-image {
+    background-color: #e0e0e0; /* Placeholder background */
+}
+
+.hero-title {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff; /* Assuming the image background is dark enough */
+    font-size: 4em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Ensure it's above images */
+}
+
+/* Product Grid Section */
+.product-grid-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.product-grid-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #111;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.product-card .add-to-cart {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .add-to-cart:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design (Basic) */
+@media (max-width: 768px) {
+    .main-navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .categories-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-title {
+        font-size: 3em;
+        bottom: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .top-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero-title {
+        font-size: 2em;
+    }
+}
